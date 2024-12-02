@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturas</title>
+</head>
+<body>
+<h1>Listado de Facturas</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="venta : ${ventas}">
+        <td text="${venta.cliente.nombre}"></td>
+        <td text="${venta.producto.nombre}"></td>
+        <td text="${venta.cantidad}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Clientes</h2>
+<ul>
+    <li each="cliente : ${clientes}" text="${cliente.nombre}"></li>
+</ul>
+
+<h2>Productos</h2>
+<ul>
+    <li each="producto : ${productos}" text="${producto.nombre}"></li>
+</ul>
+</body>
+</html>
